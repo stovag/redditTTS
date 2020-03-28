@@ -2,7 +2,7 @@ import praw
 from gtts import gTTS
 import os
 
-sub = str(input())
+sub = str(input("Select subreddit:  "))
 reddit = praw.Reddit(client_id='Your reddit API id', client_secret='Your reddit API secret id', user_agent='Your reddit username')
 
 for submission in reddit.subreddit(sub).new(limit=20):
